@@ -19,6 +19,10 @@ jobs:
     # DO is a custom runner deployed on DigitalOcean, only available for workflows under the runpod-workers organization.
     # If you would like to use this workflow, you can replace DO with ubuntu-latest or any other runner.
 
+    defaults:
+      run:
+        working-directory: ./scripts
+
     steps:
       - name: Free up disk space
         run: ./free_disk_space.sh
