@@ -24,6 +24,9 @@ jobs:
         working-directory: ./scripts
 
     steps:
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4
+
       - name: Free up disk space
         run: ./free_disk_space.sh
 
